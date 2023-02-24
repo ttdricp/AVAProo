@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form | CodingLab</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <div class="title"><span>Sign up Form</span></div>
+        <form action="/users/signup" method="post">
+          <div class="row">
+            <input type="text" placeholder="First name" name="First name" required>
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Last name" name="Last name" required>
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Email" name="Email" required>
+          </div>
+          <div class="row">
+            <input type="password" placeholder="Password" name="Password" required>
+          </div>
+          <div class="row">
+            <input type="text" placeholder="Phone" name="Phone" required>
+          </div>
+          <div class="row button">
+            <input type="submit" value="Sign up">
+          </div>
+          <div class="login-link">Already signed up? <a href="login">Log in now</a></div>
+        </form>
+      </div>
+    </div>
+
+  </body>
+</html>

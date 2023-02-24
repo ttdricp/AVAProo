@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *,
+        *:before,
+        *:after{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            background: #066acd;
+        }
+        .container{
+            width: 40%;
+            top: 50%;
+            left: 50%;
+            background: white;
+            border-radius: 10px;
+            min-width: 450px;
+            position: absolute;
+            min-height: 100px;
+            transform: translate(-50%,-50%);
+        }
+        #newtask{
+            position: relative;
+            padding: 30px 20px;
+        }
+        #newtask input{
+            width: 75%;
+            height: 45px;
+            padding: 12px;
+            color: #111111;
+            font-weight: 500;
+            position: relative;
+            border-radius: 5px;
+            font-family: 'Poppins',sans-serif;
+            font-size: 15px;
+            border: 2px solid #d1d3d4;
+        }
+
+        #newtask input:focus{
+            outline: none;
+            border-color: #0d75ec;
+        }
+        #newtask button{
+            position: relative;
+            float: right;
+            font-weight: 500;
+            font-size: 16px;
+            background-color: #0d75ec;
+            border: none;
+            color: #ffffff;
+            cursor: pointer;
+            outline: none;
+            width: 20%;
+            height: 45px;
+            border-radius: 5px;
+            font-family: 'Poppins',sans-serif;
+        }
+
+        .categ{
+
+            width: 75%;
+            font-size: 20px;
+            height: 30px;
+        }
+
+        #tasks{
+            border-radius: 10px;
+            width: 100%;
+            position: relative;
+            background-color: #ffffff;
+            /*padding: 30px 20px;*/
+            margin-top: 10px;
+        }
+
+        .task{
+            border-radius: 5px;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #939697;
+            cursor: pointer;
+            background-color: #c5e1e6;
+            height: 50px;
+            margin-bottom: 8px;
+            padding: 5px 10px;
+            display: flex;
+        }
+        .task span{
+            font-family: 'Poppins',sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .task button{
+            background-color: #6583e5;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            height: 100%;
+            width: 40px;
+            border-radius: 5px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+<div class="container">
+    <div id="newtask">
+        <form action="/addNewTask" method="post">
+            <div class="row">
+                <input type="text" placeholder="Name of task" name="Task name" required>
+            </div>
+            <div class="row">
+                <select  name="category" class="categ">
+                    <option disabled>Category</option>
+                    <option value="All">All</option>
+                    <option value="Go">Go</option>
+                    <option value="Java">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="C#">C#</option>
+                    <option value="C++">C++</option>
+                </select>
+            </div>
+            <div class="row">
+                <input type="text" placeholder="Description" name="Description" required>
+            </div>
+            <div class="row">
+                <input type="number" placeholder="Points" name="Points" required>
+            </div>
+            <div class="row">
+                <input type="datetime-local" placeholder="Till date" name="Till date" required>
+            </div>
+            <div class="row button">
+                <input type="submit" value="Add task">
+            </div>
+        </form>
+    </div>
+    <div id="tasks"></div>
+</div>
+</body>
+</html>
